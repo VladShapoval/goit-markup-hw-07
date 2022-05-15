@@ -47,6 +47,10 @@ footer {
   color: #000000;
 }
 
+header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
