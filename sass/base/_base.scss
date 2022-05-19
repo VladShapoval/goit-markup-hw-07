@@ -6,11 +6,26 @@ body {
     letter-spacing: 0.03em;
 }
 
+header {
+    border-bottom: 1px solid #ececec;
+}
+
 .container {
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 
 .list {

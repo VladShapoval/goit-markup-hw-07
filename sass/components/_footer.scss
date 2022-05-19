@@ -1,13 +1,29 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    padding-top: 58px;
-    padding-bottom: 62px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 58px;
+        padding-bottom: 62px;
+    }
 }
 
 .footer--wrapper {
-    display: flex;
+    text-align: center;
     align-items: baseline;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        text-align: left;
+    }
 }
 
 .footer__logo--color {
@@ -17,17 +33,26 @@
 .address-nav {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 60px;
+    }
 }
 
 .address-nav__city {
     margin-top: 20px;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     color: #ffffff;
 
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 20px;
+        margin-bottom: 9px;
+    }
 }
 
 .address-nav__mail,
@@ -41,13 +66,27 @@
 }
 
 .address-nav__mail {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
+    }
 }
 
 .footer-socials {
     display: flex;
     flex-direction: column;
-    margin-left: 70px;
+
+    @media screen and (max-width: $tablet) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+    }
 }
 
 .footer-socials__title {
@@ -61,6 +100,7 @@
 
 .footer-socials__items {
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -96,7 +136,23 @@
 /* subscribe */
 
 .subscribe {
-    margin-left: 93px;
+    @media screen and (min-width: $desktop) {
+        margin-left: 93px;
+    }
+}
+
+.subscribe__form {
+    @media screen and (max-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.subscribe__label {
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+    }
 }
 
 .subscribe__title {
@@ -111,9 +167,9 @@
 }
 
 .subscribe__mail {
-    width: 358px;
     height: 50px;
     padding-left: 16px;
+    margin-bottom: 20px;
 
     color: rgba(255, 255, 255, 0.6);
     background: #2f303a;
@@ -126,15 +182,28 @@
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
     }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        width: 358px;
+    }
 }
 
 .subscribe__submit {
     position: relative;
     border: 1px;
-    margin-left: 12px;
     padding: 10px 62px 10px 29px;
-    width: 200px;
+
     height: 50px;
+    width: 200px;
 
     color: #fff;
     background-color: $accent-color;
@@ -149,6 +218,10 @@
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+    }
 
     &:hover,
     &:focus {

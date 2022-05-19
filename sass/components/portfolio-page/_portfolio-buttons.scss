@@ -1,7 +1,17 @@
 .button-items {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
 }
 
 .button-items__item {
@@ -9,6 +19,12 @@
 
     &:first-child {
         margin-left: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        &:nth-child(2n + 1) {
+            margin-left: 0;
+        }
     }
 }
 
