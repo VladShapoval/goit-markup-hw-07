@@ -22,7 +22,7 @@
 
     @media screen and (max-width: $tablet) {
         display: none;
-        z-index: 90;
+        z-index: 10;
 
         &.is-open {
             display: block;
@@ -233,11 +233,11 @@
     margin-right: 8px;
     @media screen and (max-width: $tablet) {
         display: none;
+    }
 
-        .address__item:hover &,
-        .address__item:focus & {
-            fill: currentColor;
-        }
+    .address__item:hover &,
+    .address__item:focus & {
+        fill: currentColor;
     }
 }
 
@@ -295,7 +295,7 @@
     background-color: transparent;
 
     position: relative;
-    z-index: 90;
+    z-index: 10;
 }
 .header-burger__icon:hover,
 .header-burger__icon:focus {

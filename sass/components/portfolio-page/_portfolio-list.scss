@@ -11,6 +11,7 @@
     overflow: hidden;
 
     @media screen and (max-width: $tablet) {
+        margin-bottom: 30px;
         width: 100%;
     }
 
@@ -78,6 +79,12 @@
     .portfolio-items__link:focus & {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .portfolio-items__box {
+        height: 148px;
     }
 }
 
